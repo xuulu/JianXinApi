@@ -1,5 +1,14 @@
 from . import url, http, RedirectResponse
 
+"""
+from . import url, http, RedirectResponse
+
+# 引入功能模块 
+url:：路由函数
+http：进行异步网络请求函数
+RedirectResponse：重定向
+"""
+
 
 @url.get(
     '/bing',
@@ -13,7 +22,7 @@ from . import url, http, RedirectResponse
 async def bing(type: str = 'json'):
     response = await http.get('http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1')
     url = f'http://cn.bing.com{response.json()['images'][0]['url']}'
-    print('cs一下')
+    
     if type == 'image':
         return RedirectResponse(url)
 
