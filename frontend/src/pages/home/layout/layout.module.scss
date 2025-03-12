@@ -1,0 +1,63 @@
+
+.header {
+  display: flex; // 使用flex布局
+  height: 64px;
+  width: 100%;
+  //justify-content: center; // 设置两端对齐
+  justify-content: space-between; // 左右对齐
+  //align-items: center; // 对齐
+
+  position: fixed; // 固定在顶部
+  top: 5px; // 距离顶部 5 像素
+  z-index: 1000;   // 确保在其他元素之上
+
+  background-color: #ffffff;
+  padding: 0 20px; // 导航栏内边距
+  //border-bottom: 1px solid #d6caca; // 设置底部边框
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+
+
+  & .logo {
+    font-size: 24px;
+    color: #0b783c;
+    font-weight: bold;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+
+  & .menu {
+    width: 20%;
+    display: flex;
+
+    @media (max-width: 768px) {
+      width: 20%;
+      //display: none;
+    }
+  }
+
+}
+
+.content {
+  margin-top: 80px; /* 为 Content 添加顶部边距，使其在 Header 下方显示 */
+  min-height: calc(100vh - 64px - 40px);
+}
+
+.footer {
+  height: 20px; // 设置高度
+  //color: #000000; // 设置文本颜色
+  padding: 20px; // 设置内边距
+  text-align: center; // 设置文本居中对齐
+  width: 100%; // 使footer宽度为100%
+
+  a {
+    color: #ffcc00; // 链接颜色
+    text-decoration: none; // 取消下划线
+
+    &:hover {
+      text-decoration: underline; // 悬停时下划线
+    }
+  }
+}

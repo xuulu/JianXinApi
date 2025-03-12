@@ -1,0 +1,17 @@
+
+.content {
+  display: flex; /* 启用Flexbox布局 */
+  flex-direction: column;
+  justify-content: center; /* 水平居中 */
+  width: 100%; /* 确保容器占据全部宽度 */
+  /* 上边下边 | 左边右边 */
+  padding: 0 1%;
+
+  .centered {
+    flex-grow: 1; /* 让内容区域占据剩余空间 */
+    margin: 0 5%; /* 两边各留出20%的空间 */
+    text-align: center; /* 文本居中 */
+  }
+
+
+}
